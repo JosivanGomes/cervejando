@@ -1,22 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body{
     background-color: #414A4A;
-    color: #ABCF37;
+    color: rgb(207, 231, 202);
 
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #ABCF37
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p, description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.hide{
+    display: none;
+}
+
+#container{
+    width: 90%;
+    max-width: 980px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    
+    
+}
+
+#intro{
+    width: 300px;
+    margin-right: 32px;
+}
+
+main{
+    margin: 30px 0;
+    text-align: justify;
+}
+
+#botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+footer{
     text-align: center;
+
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: regular;
+    letter-spacing: 0.2px;
+
+    color: #777;
 }
 
 button{
     border: none;
     background: none;
     color: #ABCF37;
+    
+    font-size: 14px;
+    line-height: 18px;
     font-weight: bolder;
+    letter-spacing: 0.2px;
+
+
+
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    text-decoration: underline;
 }
 
 #fat{
     background: #ABCF37;
     color: #414A4A;
+
+    width: 140px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    box-shadow: 0 8px 16px rgba(172, 207, 55, 0.171);
+
 }
 
-.hide{
-    display: none;
+.ideia{
+    display: flex;
+    margin-bottom: 32px;
+
+    background-color: rgb(75, 90, 77);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(52, 56, 38, 0.658);
+
+    padding: 32px;
+
+    
+}
+
+.ideia img{
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.ideia h3{
+    margin: 0;
+}
+
+.ideia p{
+    margin: 8px 0;
+    color: rgb(136, 155, 155);
+}
+
+.ideia .descricao{
+    margin: 16px 0;
 }
