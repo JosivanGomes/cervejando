@@ -1,2 +1,4 @@
 # cervejando
- Um repositório para receitas e dicas para o cervejeiro caseiro
+Este repositorio está sendo utilizado para a prática e aprendizado
+-Todos os logos e imagens são de direito de seus respectivos donos
+-Este repositório incluindo suas imagens logos e textos não seram utilizados de forma comercial   
