@@ -1,0 +1,22 @@
+body{
+    background-color: #414A4A;
+    color: #ABCF37;
+
+    text-align: center;
+}
+
+button{
+    border: none;
+    background: none;
+    color: #ABCF37;
+    font-weight: bolder;
+}
+
+#fat{
+    background: #ABCF37;
+    color: #414A4A;
+}
+
+.hide{
+    display: none;
+}
