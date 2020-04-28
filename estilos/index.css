@@ -152,5 +152,31 @@ button:hover{
 }
 
 #modal main{
-    
+    margin-top: 128px;
+}
+
+#modal main h1{
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.input-wrapper{
+    margin: 16px 0;
+}
+
+form input{
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 6px;
+
+    border: none;
 }
