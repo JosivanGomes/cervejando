@@ -142,17 +142,19 @@ button:hover{
     position: absolute;
 
     top: 0;
-
+    
     width: 100vw;
-    height: 100vh;
-
+    height: 100vw;
+    
     display: flex;
     justify-content: center;
     
 }
 
 #modal main{
-    margin-top: 128px;
+    margin-top: 128px auto 0 auto;
+
+    width: 65%;
 }
 
 #modal main h1{
@@ -166,17 +168,50 @@ button:hover{
     max-width: 800px;
 
     margin: 0 auto;
+
+    text-align: left;
+
+
 }
 
 .input-wrapper{
     margin: 16px 0;
 }
 
-form input{
+form input, textarea{
     width: 100%;
     padding: 12px;
 
     border-radius: 6px;
 
-    border: none;
+    border: 1px solid rgba(172, 207, 55, 0.521);
+    outline: 0;
+
+    font-size: 16px;
 }
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form button{
+    background-color: #414A4A;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 16px  rgba(52, 56, 38, 0.658);
+}
+
+form button:hover{
+    background-color: #fff;
+    color: #414A4A;
+
+}
+
