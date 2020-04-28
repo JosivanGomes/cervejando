@@ -131,3 +131,26 @@ button:hover{
 .ideia .descricao{
     margin: 16px 0;
 }
+
+
+/* MODAL */
+
+#modal{
+    background-color: #ABCF37;
+    color: #414A4A;
+    
+    position: absolute;
+
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+#modal main{
+    
+}
