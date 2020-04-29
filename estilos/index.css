@@ -24,9 +24,6 @@ p, description{
     letter-spacing: 0.1px;
 }
 
-.hide{
-    display: none;
-}
 
 #container{
     width: 90%;
@@ -45,7 +42,8 @@ p, description{
     margin-right: 32px;
 }
 
-main{
+#intro main{
+    min-width: 300px;
     margin: 30px 0;
     text-align: justify;
 }
@@ -209,6 +207,34 @@ form label{
     letter-spacing: 0.8px;
 }
 
+form a{
+    background-color: rgba(29, 37, 37, 0.384);
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    font-weight: bolder;
+    font-size: 16px;
+
+    /*FLEX*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*GRID*/
+    align-self: end;
+
+    transition: 400ms;
+
+}
+
+form a:hover{
+    background-color: rgba(255, 255, 255, 0.432);
+    color: #414A4A;
+}
+
 form button{
     background-color: #414A4A;
 
@@ -226,6 +252,8 @@ form button{
     grid-column: 2;
 
     justify-self: end;
+
+    transition: 400ms;
 }
 
 form button:hover{
@@ -234,3 +262,9 @@ form button:hover{
 
 }
 
+
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
