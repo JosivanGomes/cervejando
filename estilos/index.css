@@ -171,16 +171,27 @@ button:hover{
 
     text-align: left;
 
+    display: grid;
 
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
 }
 
-.input-wrapper{
-    margin: 16px 0;
+
+main form div:nth-child(3),
+main form div:nth-child(4),
+main form div:nth-child(5){
+    grid-column: span 2;
 }
+
 
 form input, textarea{
     width: 100%;
+
     padding: 12px;
+
+    box-sizing: border-box;
 
     border-radius: 6px;
 
@@ -189,6 +200,8 @@ form input, textarea{
 
     font-size: 16px;
 }
+
+
 
 form label{
     font-weight: 600;
@@ -207,6 +220,12 @@ form button{
     cursor: pointer;
 
     box-shadow: 0 4px 16px  rgba(52, 56, 38, 0.658);
+
+    margin-top: 16px;
+
+    grid-column: 2;
+
+    justify-self: end;
 }
 
 form button:hover{
