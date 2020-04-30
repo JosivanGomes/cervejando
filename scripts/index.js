@@ -3,6 +3,16 @@ function liga_desliga(){
         .querySelector("#modal")
         .classList //criar o parametro lista
         .toggle("hide") //tirar e colocar o valor da casse - escolhendo o nome
+
+    document
+        .querySelector('body')
+        .classList
+        .toggle('hideScroll')
+
+    document
+        .querySelector('#modal')
+        .classList
+        .toggle('addScroll')
 }
 
 /*document //Apontar para documento 
