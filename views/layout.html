@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include "head.html" %}
+
+    {% block titulo %}
+
+        <title>Cervejando</title>
+
+    {% endblock %}
+    
+    
+    
+</head>
+<body id="{{bodyId}}">
+
+    <div id="container">
+
+        {% block conteudo %}
+        {% endblock %}
+     
+    </div>
+
+    <!-- MODAL -->
+    {% include "modal.html" %}
+
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+

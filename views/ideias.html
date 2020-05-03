@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ideias - Cervejando</title>
+{% extends "layout.html" %}
 
-        <!--Css da Página-->
-        <link rel="stylesheet" href="estilos/index.css">
-    </head>
-    <body id="pg_ideias">
-        <div id="container">
-            <header>
-                <a href="/"><img src="" alt="Sem logo no momento" width="300px"></a>
+{% block titulo %}
+    <title>Ideias - Cervejando</title>
+{% endblock %}
+
+{% set bodyId = "pg_ideias" %}
+
+{% block conteudo %}
+    <header>
+        <a href="/"><img src="" alt="Sem logo no momento" width="300px"></a>
                     
-                <nav>
+        <nav>
+            <li><a href="\">Início</a></li>
+            <li><a href="#">Ideias</a></li>
+            <li><a href="#" onclick="liga_desliga()">Nova Ideia</a></li>
                     
-                      <li><a href="\">Início</a></li>
-                      <li><a href="#">Ideias</a></li>
-                      <li><a href="#" onclick="liga_desliga()">Nova Ideia</a></li>
-                    
-                </nav>
-            </header>
-            <section id="title">
-                <p>Exibindo: </p>
-                <h1>Ideias</h1>
-            </section>
-            <main>
-                <section id="ideias">
-                    
-                    {% include "template_ideias.html" %}   
-                    
-                </section>
-            </main>
-            <footer>
-                Com 🍺 Josivan Gomes
-            </footer>
+        </nav>
+    </header>
     
-        </div>
+    <section id="title">
+        <p>Exibindo: </p>
+        <h1>Ideias</h1>
+    </section>
+    
+    <main>
+        <section id="ideias">
+            {% include "template_ideias.html" %}   
+        </section>
+    </main>
+    <footer>
+        Com 🍺 Josivan Gomes
+    </footer>
+{% endblock %}
         
-        <!-- MODAL -->
-        {% include "modal.html" %}
-
-
-        <script src="scripts/index.js"></script>
-    </body>
-</html>

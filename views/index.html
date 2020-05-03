@@ -1,64 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cervejando</title>
+{% extends "layout.html" %}
 
-    <!--Css da Página-->
-    <link rel="stylesheet" href="estilos/index.css">
-</head>
-<body>
-
-    <div id="container">
-
-        <section id="intro">
-            <header>
-                <a href="/"><img src="" alt="Sem logo no momento" width="300px"></a>
-            </header>
+{% block conteudo %}
+    <section id="intro">
+        <header>
+            <a href="/"><img src="" alt="Sem logo no momento" width="300px"></a>
+        </header>
+        
+        <main>
             
-            <main>
-                
-                <p>
-                    Qual a cerveja que você fará hoje?
-                </p>
-    
-                <p>
-                    Encontre aqui algumas ideias e dicas para testar, cozinhar, provar e aprender. <strong>Lembre-se, ninguém aprende a andar de bike só lendo ou vendo vídeos</strong> aqui você irá errar um pouco, mas sem erros não tem aprendizado
-                </p>
-    
-                <p>
-                    Comece clicando em ver ideias para ver as ideias, receitas e dicas já cadastradas ou contribua adicionando novas ideias ao portifólio.
-                </p>
+            <p>
+                Qual a cerveja que você fará hoje?
+            </p>
 
-            </main>
+            <p>
+                Encontre aqui algumas ideias e dicas para testar, cozinhar, provar e aprender. <strong>Lembre-se, ninguém aprende a andar de bike só lendo ou vendo vídeos</strong> aqui você irá errar um pouco, mas sem erros não tem aprendizado
+            </p>
 
-            <section id="botoes">
-                <button class="fat" onclick="liga_desliga()">+ Adicionar Ideia</button>
+            <p>
+                Comece clicando em ver ideias para ver as ideias, receitas e dicas já cadastradas ou contribua adicionando novas ideias ao portifólio.
+            </p>
 
-                <a href="/ideias">Ver Ideias</a>
-            </section>    
+        </main>
 
-            <footer>
-                Com 🍺 Josivan Gomes
-            </footer>
-        </section>
+        <section id="botoes">
+            <button class="fat" onclick="liga_desliga()">+ Adicionar Ideia</button>
 
-        <section id="ultimas-ideias">
+            <a href="/ideias">Ver Ideias</a>
+        </section>    
 
-            {% include "template_ideias.html" %}
+        <footer>
+            Com 🍺 Josivan Gomes
+        </footer>
+    </section>
 
-            
-        </section>
+    <section id="ultimas-ideias">
 
+        {% include "template_ideias.html" %}
 
-    </div>
-
-    <!-- MODAL -->
-    {% include "modal.html" %}
-
-
-    <script src="scripts/index.js"></script>
-</body>
-</html>
-
+        
+    </section>
+{% endblock %}

@@ -1,4 +1,5 @@
 {% for ideia in ideias %}
+<section id="ultimas-ideias">
     <section class="ideia">
         <img src="{{ideia.img}}" alt="Imagem {{ideia.categoria}}">
        
@@ -11,4 +12,5 @@
             <a href="{{ideia.link}}" target="_blank">Seguir para ideia</a>
         </div>
     </section>
+</section>
 {% endfor %}
