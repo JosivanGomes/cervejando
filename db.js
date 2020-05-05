@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database('./cervejando.db')
-
+/*
 db.serialize(function() {
 
     //CRIANDO TABELA
@@ -17,7 +17,7 @@ db.serialize(function() {
     `)
 
     //INSERINDO DADOS
-    const query = `
+     const query = `
         INSERT INTO ideias (
             imagem,
             titulo,
@@ -41,7 +41,23 @@ db.serialize(function() {
         console.log(this)
     })
 
-    //CONSULTANDO
 
     //DELETANDO
+    db.run(`DELETE FROM ideias WHERE id = ?`, [1], function(err){
+        if (err) return console.log(err)
+
+        console.log("DELETADO: ", this)
+    })
+
+    //CONSULTANDO
+    db.all(`SELECT * FROM ideias`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    
 })
+*/
+
+module.exports = db

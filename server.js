@@ -12,7 +12,34 @@ nunjucks.configure("views", {
 //CONFIGURANDO ARQUIVOS ESTATICOS
 server.use(express.static("public"))
 
+const db = require("./db")
 
+//CONSULTANDO
+//CRIANDO ROTA (/)
+//PEGANDO O PEDIDO DO CLIENTE
+server.get("/", function(req, res) {
+
+    db.all(`SELECT * FROM ideias`, function(err, rows){
+        if (err){
+            console.log(err)
+            return res.send("Erro - Banco de dados")
+        }else{
+            var reverso_ideias = [...rows].reverse()
+            ultimas_ideias = []
+            for (ideia of reverso_ideias){
+                if(ultimas_ideias.length < 2){
+                    ultimas_ideias.push(ideia)
+                }
+            }
+            return res.render("index.html", { ideias : ultimas_ideias })
+        }
+        
+    })
+
+    
+})
+
+/*
 const ideias = [
     {
         img: "https://image.flaticon.com/icons/svg/2836/2836485.svg",
@@ -42,23 +69,20 @@ const ideias = [
         descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, fuga. Distinctio alias atque, quis in fuga eaque expedita possimus ipsum omnis  quibusdam amet dolor labore facilis odit est illum dolorum?",
         link: "https://youtube.com"
     }]
+*/
 
-var reverso_ideias = [...ideias].reverse()
-
-//CRIANDO ROTA (/)
-//PEGANDO O PEDIDO DO CLIENTE
-server.get("/", function(req, res) {
-    ultimas_ideias = []
-    for (ideia of reverso_ideias){
-        if(ultimas_ideias.length < 2){
-            ultimas_ideias.push(ideia)
-        }
-    }
-    return res.render("index.html", { ideias : ultimas_ideias })
-})
 
 server.get("/ideias", function(req, res){
-    return res.render("ideias.html", {ideias : reverso_ideias})
+
+    db.all(`SELECT * FROM ideias`, function(err, rows){
+        if (err){
+            console.log(err)
+            return res.send("Erro - Banco de dados")
+        }else{
+            var reverso_ideias = [...rows].reverse()
+            return res.render("ideias.html", {ideias : reverso_ideias})
+        }
+    })
 })
 
 //LIGANDO SERVIDOR LOCAL
