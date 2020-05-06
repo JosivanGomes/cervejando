@@ -11,6 +11,8 @@ nunjucks.configure("views", {
 
 //CONFIGURANDO ARQUIVOS ESTATICOS
 server.use(express.static("public"))
+//HABILITANITANDO REQ.BODY
+server.use(express.urlencoded({extended : true}))
 
 const db = require("./db")
 
@@ -18,7 +20,7 @@ const db = require("./db")
 //CRIANDO ROTA (/)
 //PEGANDO O PEDIDO DO CLIENTE
 server.get("/", function(req, res) {
-
+    
     db.all(`SELECT * FROM ideias`, function(err, rows){
         if (err){
             console.log(err)
@@ -84,6 +86,52 @@ server.get("/ideias", function(req, res){
         }
     })
 })
+
+server.post("/", function(req, res){
+    const idFromIdeias = req.body.del
+    //DELETANDO
+    db.run(`DELETE FROM ideias WHERE id = ?`, [idFromIdeias], function(err){
+        if (err){
+            console.log(err)
+            return res.send("Erro - Banco de dados")
+        }else{
+            console.log("DELETADO: ", this)
+            return res.redirect("/ideias")
+        }
+        
+    })
+})
+
+server.post("/", function(req, res){
+    //INSERINDO DADOS
+    const query = `
+    INSERT INTO ideias (
+        imagem,
+        titulo,
+        categoria,
+        descricao,
+        link
+    ) VALUES (?, ?, ?, ?, ?);
+    ` 
+
+    const valores = [
+        req.body.imagem,
+        req.body.titulo,
+        req.body.categoria,
+        req.body.descricao,
+        req.body.link
+    ]
+
+    db.run(query, valores, function(err){
+        if (err){
+            console.log(err)
+            return res.send("Erro - Banco de dados")
+        }else{
+            return res.redirect("/ideias")
+        }
+    })
+})
+
 
 //LIGANDO SERVIDOR LOCAL
 server.listen(3000)

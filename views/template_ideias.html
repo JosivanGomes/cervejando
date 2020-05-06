@@ -2,6 +2,8 @@
 <section id="ultimas-ideias">
     <section class="ideia">
         <img src="{{ideia.imagem}}" alt="Imagem {{ideia.categoria}}">
+
+        
        
         <div class="conteudo">
             <h3>{{ideia.titulo}}</h3>
@@ -9,7 +11,13 @@
             <div class="descricao">
                 {{ideia.descricao}}
             </div>
-            <a href="{{ideia.link}}" target="_blank">Seguir para ideia</a>
+            <nav>
+                <a href="{{ideia.link}}" target="_blank">Seguir para ideia</a>
+                <form action="/" method="POST">
+                    <input type="text" name="id" value="{{ideia.id}}" style="display: none;">
+                    <button class="del" href="#">Remover ideia</button>
+                </form>
+            </nav> 
         </div>
     </section>
 </section>

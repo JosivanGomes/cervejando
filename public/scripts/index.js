@@ -15,6 +15,30 @@ function liga_desliga(){
         .toggle('addScroll')
 }
 
+function checkFields(event){
+    const checarValor =[
+        "titulo",
+        "catgoria",
+        "imagem",
+        "descricao",
+        "link"
+    ]
+
+    const checarVazio = checarValor.find(function(value){
+        const verificaString = typeof event.target[value].value === 'string'
+        const verificaVazio = !event.target[value].value.trim()
+
+        if(verificaString && verificaVazio){
+            return true
+        }
+    })
+
+    if(checarVazio){
+        event.preventDefault()
+        alert("Preencha todos os campos")
+    }
+}
+
 /*document //Apontar para documento 
     .querySelector("#nv_ideia") //Escolher seletor pelo nome
     .addEventListener("click",function(){ //adicionar evento

@@ -2,7 +2,7 @@
     <main>
         <h1>Nova ideia</h1>
         
-        <form action="">
+        <form action="/" method="POST" onsubmit="return checkFields(event)">
             
             <div class="input-wrapper">
                 <label for="titulo">Título da ideia</label>
@@ -14,7 +14,10 @@
                 <input type="text" name="categoria">
             </div>
 
-            <!-- Imagem deve ser selicionada de acordo com a categoria -->
+            <div class="input-wrapper">
+                <label for="imagem">Imagem</label>
+                <input type="url" name="imagem">
+            </div>
 
             <div class="input-wrapper">
                 <label for="descricao">Descrição</label>
