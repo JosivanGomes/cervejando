@@ -7,11 +7,13 @@ Projeto realizado com base no Workshop de Desenvolvimento Web, da Semana OmniSta
 -A ideia principal fala sobre um repositório para ideias de como passar o perildo de quarentena do COVID-19
 
 -Alteração realizadas:
+
   * Estilo da página
   * Algumas funcionalidades
   * Assunto
   
 -Tecnologias em uso:
+
   *Html5
   *Css3
   *JavaScript
