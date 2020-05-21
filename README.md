@@ -10,6 +10,7 @@ Projeto realizado com base no Workshop de Desenvolvimento Web, da Semana OmniSta
   * Estilo da página
   * Algumas funcionalidades
   * Assunto
+  
 -Tecnologias em uso:
   *Html5
   *Css3
