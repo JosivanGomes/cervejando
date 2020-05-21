@@ -14,7 +14,7 @@ Projeto realizado com base no Workshop de Desenvolvimento Web, da Semana OmniSta
   
 -Tecnologias em uso:
 
-  *Html5
-  *Css3
-  *JavaScript
-  *NodeJs
+  * Html5
+  * Css3
+  * JavaScript
+  * NodeJs
