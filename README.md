@@ -1,6 +1,15 @@
 # cervejando
-Este é repositório pessoal está sendo utilizado para a prática e aprendizado
--Todos os logos, imagens, videos, icones e textos são de direito de seus respectivos donos
--Este repositório incluindo suas imagens, logos e etc não seram utilizados de forma comercial por este autor que vos escreve
 
+Projeto realizado com base no Workshop de Desenvolvimento Web, da Semana OmniStack, da RocketSeat, ministrado por Mike Brito.
+-Trata-se de um repositório para guardar ideias do mundo cervejeiroC
+-A ideia principal fala sobre um repositório para ideias de como passar o perildo de quarentena do COVID-19
 
+-Alteração realizadas:
+  * Estilo da página
+  * Algumas funcionalidades
+  * Assunto
+-Tecnologias em uso:
+  *Html5
+  *Css3
+  *JavaScript
+  *NodeJs
